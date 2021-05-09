@@ -1,0 +1,16 @@
+{{template "base" .}}
+
+{{define "content"}}
+  <h1>About</h1>
+  <p>call back ##</p>
+
+  <p>data: {{index .StringMap "test"}}</p>
+
+  <p>
+      {{if ne (index .StringMap "remote_ip") ""}}
+        Your IP is {{index .StringMap "remote_ip"}}
+      {{else}}
+        Not Found
+      {{end}}
+  </p>
+{{end}}
